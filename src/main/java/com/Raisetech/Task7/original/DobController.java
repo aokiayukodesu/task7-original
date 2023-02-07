@@ -9,10 +9,10 @@ import java.util.Map;
 @RestController
 public class DobController {
 
- @GetMapping("/dobs")
-     public Map<String,String> getDobs(@RequestParam("date_of_birthday") String date_of_birthday) {
-         return Map.of("aoki","1989/10/31");
-     }
- }
+    @GetMapping("/dobs")
+    public Map<String, String> getUserByDateOfBirth(@RequestParam("date_of_birth") String dateOfBirth) {
+        return Map.of("aoki", "1989/10/31");
+    }
+}
 
 
