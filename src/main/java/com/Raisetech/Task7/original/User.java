@@ -5,9 +5,9 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import org.springframework.format.annotation.DateTimeFormat;
 
-import java.util.Date;
+import java.time.LocalDate;
 
-public class UserDateFormat {
+public class User {
 
     @NotBlank
     @NotNull
@@ -15,13 +15,13 @@ public class UserDateFormat {
     private String name;
 
     @DateTimeFormat(pattern = "yyyy/MM/dd")
-    private Date birthday;
+    private LocalDate birthday;
 
     public String getName() {
         return name;
     }
 
-    public Date getBirthday() {
+    public LocalDate getBirthday() {
         return birthday;
     }
 }

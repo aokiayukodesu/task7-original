@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class DobController {
 
     @GetMapping("/dobs")
-    public String getUserByDateOfBirth(@Validated UserDateFormat form, BindingResult result, @RequestParam("date_of_birth")
+    public String getUserByDateOfBirth(@Validated User form, BindingResult result, @RequestParam("date_of_birth")
     String dateOfBirth) {
         if (result.hasErrors()) {
         }
